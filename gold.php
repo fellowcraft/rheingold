@@ -37,7 +37,7 @@ aAmpEnv interp  kAmpEnv
 
 ;kModEnv linseg  0, iat2, iamp, irel2, 0
 ;                                                      1x     sec       wrap
-aIn  diskin2 "/home/frank/Music/WAV/RheingoldMONO.wav", ifreq, iskiptime, 1
+aIn  diskin2 "/home/frank/Music/WAV/rtm.wav", ifreq, iskiptime, 1
 aLeft  = aIn * kpan       * aAmpEnv
 aRight = aIn * (1 - kpan) * aAmpEnv 
 
@@ -58,7 +58,7 @@ endin
 ';
 // --------------------- init vars ---------------------------------------------
 $TT  = 300;
-$Events = 960;
+$Events = 3000;
 // --------------------------- sco head ----------------------------------------
 $scoreHeader =  '; Reverb
 i99     0   '.$TT.'    0.9 '.PHP_EOL.PHP_EOL;
@@ -76,11 +76,11 @@ return $TDur;
 }
 
 function iamp() {
-return stats_rand_gen_iuniform(-110,-70);
+return stats_rand_gen_iuniform(-127,-87);
 }
 
 function ifreq() {
-return round(stats_rand_gen_funiform(.98,1.02),3); 
+return round(stats_rand_gen_funiform(.8,1.2),3); 
 }
 
 function iat() {
@@ -90,7 +90,7 @@ return round($TDur*0.25,2);
 
 function irel() {
 Global $TDur;
-return round($TDur*0.75,2);
+return round($TDur*0.75-0.03,2);
 }
 
 
@@ -103,11 +103,11 @@ return round(stats_rand_gen_funiform(0,1),2);
 }
 
 function iskiptime() {
-return round(stats_rand_gen_funiform(0,4*60+28),2); 
+return round(stats_rand_gen_funiform(0,60*60*2+31),2); 
 }
 
 function irevSend() {
-return round(stats_rand_gen_funiform(0,0.7),2); 
+return round(stats_rand_gen_funiform(0,0.3),2); 
 //return 0;
 }
 
