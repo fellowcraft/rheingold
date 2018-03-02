@@ -28,7 +28,8 @@ aAmpEnv interp  kAmpEnv
 
 ;kModEnv linseg  0, iat2, iamp, irel2, 0
 ;                                                      1x     sec       wrap
-aIn  diskin2 "/home/frank/Music/WAV/RheingoldMONO.wav", ifreq, iskiptime, 1
+;aIn  diskin2 "/home/frank/Music/WAV/RheingoldMONO.wav", ifreq, iskiptime, 1
+aIn  diskin2 "/home/frank/Music/WAV/rtm.wav", ifreq, iskiptime, 1
 aLeft  = aIn * kpan    *  kAmpEnv
 aRight = aIn * kAmpEnv * (1 - kpan)
 
