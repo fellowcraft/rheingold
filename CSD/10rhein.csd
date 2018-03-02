@@ -23,8 +23,8 @@ irevSend        = p11
 ; iat2            = p13
 ; irel2           = p14
 kpan    linseg  ipanStart, idur, ipanEnd
-kAmpEnv linseg  0, iat,  iamp, irel,  0
-aAmpEnv interp  kAmpEnv
+aAmpEnv expsega  0.01, iat,  iamp, irel,  0.01
+;aAmpEnv interp  kAmpEnv
 
 ;kModEnv linseg  0, iat2, iamp, irel2, 0
 ;                                                      1x     sec       wrap

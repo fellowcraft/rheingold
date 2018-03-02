@@ -38,7 +38,7 @@ iskiptime       = p10
 irevSend        = p11
 
 kpan    linseg  ipanStart, idur, ipanEnd
-aAmpEnv linseg  0.01, iat,  iamp, irel, 0.01
+aAmpEnv expsega 0.01, iat,  iamp, irel, 0.01
 
 aIn  diskin2 "/home/frank/Music/WAV/rtm.wav", ifreq, iskiptime, 1
 
@@ -61,8 +61,8 @@ garight   =    0
 endin
 ';
 // --------------------- init vars ---------------------------------------------
-$TT  = 600;
-$Events = 8000;
+$TT  =     60*26+45;     //  26 min
+$Events = 800*26+600;    // 800 events per min
 // --------------------------- sco head ----------------------------------------
 $scoreHeader =  '; Reverb
 i99     0   '.$TT.'    0.9 '.PHP_EOL.PHP_EOL;
@@ -107,7 +107,7 @@ return round(stats_rand_gen_funiform(0,1),2);
 }
 
 function iskiptime() {
-return round(stats_rand_gen_funiform(0,60*60*2+31),2); 
+return round(stats_rand_gen_funiform(0,60*26+45),2); 
 }
 
 function irevSend() {

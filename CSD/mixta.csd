@@ -30,6 +30,7 @@ aAmpEnv interp  kAmpEnv
 ;                                                      1x     sec       wrap
 ;aIn  diskin2 "/home/frank/Music/WAV/RheingoldMONO.wav", ifreq, iskiptime, 1
 aIn  diskin2 "/home/frank/Music/WAV/rtm.wav", ifreq, iskiptime, 1
+aIn = aIn * 0.5
 aLeft  = aIn * kpan    *  kAmpEnv
 aRight = aIn * kAmpEnv * (1 - kpan)
 
