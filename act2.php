@@ -65,7 +65,7 @@ $TT  =     (60*71+31)-(60*26+45);        // seconds
 $Events =  intval($TT*13.33);           // 800 events per min = 13.3 per second
 // --------------------------- sco head ----------------------------------------
 $scoreHeader =  '; Reverb
-i99     0   '.$TT.'    0.9 '.PHP_EOL.PHP_EOL;
+i99     0   '.($TT+14).'    0.9 '.PHP_EOL.PHP_EOL;
 
 // --------------------------- main p1-px fields -------------------------------
 function p2() {

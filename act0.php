@@ -3,11 +3,11 @@
 flags:
 -w   writes to file
 
-
-Vorspiel - Scene 1 (04:30)
-Scene 2 (26:45)
-Scene 3 (1:11:31)
-Scene 4 (1:40:42)
+Vorspiel (00:30)
+Scene 1  (04:30)
+Scene 2  (26:45)
+Scene 3  (1:11:31)
+Scene 4  (1:40:42)
 Applause (2:30:10)
 
 */
@@ -29,7 +29,7 @@ garight init 0
 instr 1
 idur            = p3
 iamp            = ampdbfs(p4)
-ifreq           = p5   ;  1x - negative backwards - def 1
+ifreq           = p5   ;  1x - negative backwards 
 iat             = p6
 irel            = p7
 ipanStart       = p8
@@ -61,8 +61,10 @@ garight   =    0
 endin
 ';
 // --------------------- init vars ---------------------------------------------
-$TT  =     (60*26+45)-(60*4+30);     //  26 min
-$Events =   intval($TT*13.33);      // 800 events per min = 13.3 per second
+$startT  = 60*0;
+$endT    = 60*4+30-14;
+$TT      = $endT - $startT;
+$Events  = intval($TT*13.33);           // 800 events per min = 13.3 per second
 // --------------------------- sco head ----------------------------------------
 $scoreHeader =  '; Reverb
 i99     0   '.($TT+14).'    0.9 '.PHP_EOL.PHP_EOL;
@@ -113,7 +115,9 @@ return round(stats_rand_gen_funiform(0,1),2);
 }
 
 function iskiptime() {
-return round(stats_rand_gen_funiform(60*4+30,60*26+45),2); 
+Global $startT;
+Global $endT;
+return round(stats_rand_gen_funiform($startT,$endT),2); 
 }
 
 function irevSend() {
