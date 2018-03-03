@@ -6,3 +6,23 @@ Frank http://Rothkamm.com
 [1] https://www.youtube.com/watch?v=IHptIIbbXz4
 [2] http://baskaru.com/karu33.htm
 [3] http://rothkamm.com/album.php?Beethoven+No.9
+
+> To hear the music of "rheingold" in real-time: 
+
+1.  You need git and csound installed (http://csound.com/download.html). 
+
+> Open Terminal:
+
+git clone https://github.com/fellowcraft/rheingold.git
+
+cd rheingold
+
+csound -odac CSD/act1GENERAL.csd
+
+csound -odac CSD/act2.csd
+
+csound -odac CSD/act3.csd
+
+csound -odac CSD/act4.csd
+
+> This will play the latest version of all four acts.
