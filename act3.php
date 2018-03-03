@@ -61,8 +61,8 @@ garight   =    0
 endin
 ';
 // --------------------- init vars ---------------------------------------------
-$TT  =     60*26+45;     //  26 min
-$Events = 800*26+600;    // 800 events per min = 13.3 per second
+$TT  =     60*71+31;     //  71 min
+$Events = 800*71+400;    // 800 events per min = 13.3 per second
 // --------------------------- sco head ----------------------------------------
 $scoreHeader =  '; Reverb
 i99     0   '.$TT.'    0.9 '.PHP_EOL.PHP_EOL;
@@ -113,7 +113,7 @@ return round(stats_rand_gen_funiform(0,1),2);
 }
 
 function iskiptime() {
-return round(stats_rand_gen_funiform(0,60*26+45),2); 
+return round(stats_rand_gen_funiform(60*26+45,60*71+31),2); 
 }
 
 function irevSend() {
