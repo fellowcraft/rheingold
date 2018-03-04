@@ -11,7 +11,9 @@ Open Terminal:
 
 > cd rheingold
 
-> csound -odac CSD/act1GENERAL.csd
+> csound -odac CSD/act0.csd
+
+> csound -odac CSD/act1.csd
 
 > csound -odac CSD/act2.csd
 
@@ -19,7 +21,7 @@ Open Terminal:
 
 > csound -odac CSD/act4.csd
 
-This will play the latest version of all four acts.
+This will play the latest version of all four acts plus Vorspiel.
 
 Frank http://Rothkamm.com 
 
