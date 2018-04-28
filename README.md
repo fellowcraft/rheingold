@@ -8,11 +8,17 @@ To hear the music of "rheingold" in real-time, you need git and csound installed
 Open Terminal:
 
 > git clone https://github.com/fellowcraft/rheingold.git
+
 > cd rheingold
+
 > csound -odac CSD/act0.csd
+
 > csound -odac CSD/act1.csd
+
 > csound -odac CSD/act2.csd
+
 > csound -odac CSD/act3.csd
+
 > csound -odac CSD/act4.csd
 
 This will play the latest versions.
@@ -20,8 +26,11 @@ This will play the latest versions.
 To compile new versions with the *.php files, you need to install the stats package. For Ubuntu 16.04:
 
 > sudo apt-get install php7.2-dev
+
 > sudo apt-get install php-pear
+
 > sudo pecl channel-update pecl.php.net
+
 > sudo pecl install stats-2.0.3
 
 Frank http://Rothkamm.com  
